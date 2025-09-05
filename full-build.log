@@ -1,0 +1,313 @@
+[info] welcome to sbt 1.11.4 (Red Hat, Inc. Java 1.8.0_462)
+[info] loading settings for project proj1-main-build from plugins.sbt...
+[info] loading project definition from /home/adm_akethar1/proj1-main/project
+[info] loading settings for project proj1-main from build.sbt...
+[info] set current project to tetra-elevate-conversion (in build file:/home/adm_akethar1/proj1-main/)
+[info] Executing in batch mode. For better performance use sbt's shell
+[success] Total time: 0 s, completed Sep 5, 2025 1:10:38 AM
+[info] compiling 31 Scala sources to /home/adm_akethar1/proj1-main/target/scala-2.12/classes ...
+[info] Non-compiled module 'compiler-bridge_2.12' for Scala 2.12.10. Compiling...
+[info]   Compilation completed in 10.612s.
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:29:69: invalid escape character
+[error] for FILE in `find $LOG_DIR -mtime +3 | grep "TRANSID_SPARK_SPOOLING\.log_"`
+[error]                                                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:42:42: unclosed character literal (or use " not ' for string literal)
+[error] trap 'echo "Kill Signal Received.\n";exit' SIGHUP SIGINT SIGQUIT SIGTERM SIGSEGV
+[error]                                          ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:58:38: Invalid literal number
+[error] --conf spark.executor.memoryOverhead=1024m \
+[error]                                      ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:63:39: Invalid literal number
+[error] --driver-java-options -XX:MaxPermSize=1024m \
+[error]                                       ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:64:17: Invalid literal number
+[error] --driver-memory 2g \
+[error]                 ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:66:19: Invalid literal number
+[error] --executor-memory 6g \
+[error]                   ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:84:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n'
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:85:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n'
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:86:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n' "$location serializeddevicehistoryV2 extraction job Failed."
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:87:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n' "Please find the attached error stack log for analysis."
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:88:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n'
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:89:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n' "Thanks,"
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:90:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n' "DLM-Extraction Team" ) | mailx -s "$location dualimeiinfobyprimaryimei extraction job failed" -a ${LOG_DIR} $sparkfile1 mounica.arepalli1@t-mobile.com
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:1:1: expected class or object definition
+[error] #!/bin/bash
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:2:1: expected class or object definition
+[error] source ~/.bash_profile
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:3:1: expected class or object definition
+[error] BASE_LOCATION="/app/tetra/DLM"
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:4:1: expected class or object definition
+[error] export SCRIPT_DIR="${BASE_LOCATION}/scripts/"
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:5:1: expected class or object definition
+[error] export CONF_DIR="${BASE_LOCATION}/config/"
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:6:1: expected class or object definition
+[error] export JAR_DIR="${BASE_LOCATION}/jar/"
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:7:1: expected class or object definition
+[error] export LOG_DIR="${BASE_LOCATION}/logs/"
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:9:1: expected class or object definition
+[error] SPARK_HOME=/app/tetra/elevate/software/spark/
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:13:1: expected class or object definition
+[error] if [ $# -eq 1 ]; then
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:13:18: expected class or object definition
+[error] if [ $# -eq 1 ]; then
+[error]                  ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:14:3: expected class or object definition
+[error]   location=$1
+[error]   ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:17:3: expected class or object definition
+[error]   exit 1
+[error]   ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:18:1: expected class or object definition
+[error] fi
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:21:1: expected class or object definition
+[error] dt=`/bin/date +%d%m%Y`
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:24:1: expected class or object definition
+[error] LOG_FILE=${LOG_DIR}serializeddevicehistoryV2Extract.log_"$dt"_1
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:26:1: expected class or object definition
+[error] touch $LOG_FILE
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:27:1: expected class or object definition
+[error] chmod 777 $LOG_FILE
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:30:1: expected class or object definition
+[error] do
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:32:1: expected class or object definition
+[error] done
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:35:1: expected class or object definition
+[error] then
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:36:1: expected class or object definition
+[error] echo "Another initiation Failed!!! Another Script is already running. New instance will not be invoked. !!" >> ${LOG_FILE}
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:37:1: expected class or object definition
+[error] (>&2 echo "Another initiation Failed!!! Another Script is already running. New instance will not be invoked. !!")
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:38:1: expected class or object definition
+[error] exit 1
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:39:1: expected class or object definition
+[error] fi
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:40:1: expected class or object definition
+[error] #------------------------------------------------------------------------------------------------------
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:41:1: expected class or object definition
+[error] echo $$
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:42:1: expected class or object definition
+[error] trap 'echo "Kill Signal Received.\n";exit' SIGHUP SIGINT SIGQUIT SIGTERM SIGSEGV
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:42:38: expected class or object definition
+[error] trap 'echo "Kill Signal Received.\n";exit' SIGHUP SIGINT SIGQUIT SIGTERM SIGSEGV
+[error]                                      ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:46:1: expected class or object definition
+[error] echo "Extracting data for yesterday from SOA for TRANSID Report" >> ${LOG_FILE}
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:47:1: expected class or object definition
+[error] touch ${LOG_DIR}serializeddevicehistoryV2Extract.lck
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:48:1: expected class or object definition
+[error] chmod 777 ${LOG_DIR}serializeddevicehistoryV2Extract.lck
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:52:1: expected class or object definition
+[error] ${SPARK_HOME}bin/spark-submit \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:53:1: expected class or object definition
+[error] --class com.tmobile.dlmExtract.serializeddevicehistoryV2Extract \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:54:1: expected class or object definition
+[error] --name serializeddevicehistoryV2Extract \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:55:1: expected class or object definition
+[error] --master yarn \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:56:1: expected class or object definition
+[error] --deploy-mode cluster \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:57:1: expected class or object definition
+[error] --conf "spark.executor.extraJavaOptions=-XX:MaxPermSize=1024M" \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:58:1: expected class or object definition
+[error] --conf spark.executor.memoryOverhead=1024m \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:59:1: expected class or object definition
+[error] --conf spark.dynamicAllocation.enabled=false \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:60:1: expected class or object definition
+[error] --conf spark.sql.autoBroadcastJoinThreshold=209715200 \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:61:1: expected class or object definition
+[error] --conf spark.sql.shuffle.partitions=50 \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:62:1: expected class or object definition
+[error] --conf spark.shuffle.blockTransferService=nio \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:63:1: expected class or object definition
+[error] --driver-java-options -XX:MaxPermSize=1024m \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:64:1: expected class or object definition
+[error] --driver-memory 2g \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:65:1: expected class or object definition
+[error] --num-executors 8 \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:66:1: expected class or object definition
+[error] --executor-memory 6g \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:67:1: expected class or object definition
+[error] --executor-cores 8 \
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:68:1: expected class or object definition
+[error] ${JAR_DIR}tetra-elevate-conversion_2.12-1.0.jar ${CONF_DIR} extract_config.json TETRA $1
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:70:1: expected class or object definition
+[error] if [ $? -eq 0 ]
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:71:1: expected class or object definition
+[error] then
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:72:5: expected class or object definition
+[error]     echo "$location serializeddevicehistoryV2 extraction is completed successfully"
+[error]     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:74:5: expected class or object definition
+[error]     rm -f ${LOG_DIR}serializeddevicehistoryV2Extract.lck
+[error]     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:75:5: expected class or object definition
+[error]     echo "Lock Released" >> ${LOG_FILE}
+[error]     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:78:9: expected class or object definition
+[error]         cd $LOG_DIR
+[error]         ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:79:9: expected class or object definition
+[error]         sparkfn=$(ls -rt1 sparkstacktrace.log|tail -1)
+[error]         ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:80:9: expected class or object definition
+[error]         for LOG_DIR in ${sparkfn}
+[error]         ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:81:9: expected class or object definition
+[error]         do
+[error]         ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:83:13: expected class or object definition
+[error]             ( printf "Dear All,"
+[error]             ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:91:9: expected class or object definition
+[error]         done
+[error]         ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:92:9: expected class or object definition
+[error]         rm -f ${LOG_DIR}serializeddevicehistoryV2Extract.lck
+[error]         ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:93:9: expected class or object definition
+[error]         echo "Lock Released" >> ${LOG_FILE}
+[error]         ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/common/serializeddevicehistoryV2Extract.scala:94:1: expected class or object definition
+[error] fi
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:29:69: invalid escape character
+[error] for FILE in `find $LOG_DIR -mtime +3 | grep "TRANSID_SPARK_SPOOLING\.log_"`
+[error]                                                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:42:42: unclosed character literal (or use " not ' for string literal)
+[error] trap 'echo "Kill Signal Received.\n";exit' SIGHUP SIGINT SIGQUIT SIGTERM SIGSEGV
+[error]                                          ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:58:38: Invalid literal number
+[error] --conf spark.executor.memoryOverhead=1024m \
+[error]                                      ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:63:39: Invalid literal number
+[error] --driver-java-options -XX:MaxPermSize=1024m \
+[error]                                       ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:64:17: Invalid literal number
+[error] --driver-memory 2g \
+[error]                 ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:66:19: Invalid literal number
+[error] --executor-memory 6g \
+[error]                   ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:84:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n'
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:85:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n'
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:86:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n' "$location serializeddevicehistoryV2 extraction job Failed."
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:87:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n' "Please find the attached error stack log for analysis."
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:88:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n'
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:89:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n' "Thanks,"
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:90:37: unclosed character literal (or use " not ' for string literal)
+[error]                         printf '%s\n' "DLM-Extraction Team" ) | mailx -s "$location dualimeiinfobyprimaryimei extraction job failed" -a ${LOG_DIR} $sparkfile1 mounica.arepalli1@t-mobile.com
+[error]                                     ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:1:1: expected class or object definition
+[error] #!/bin/bash
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:2:1: expected class or object definition
+[error] source ~/.bash_profile
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:3:1: expected class or object definition
+[error] BASE_LOCATION="/app/tetra/DLM"
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:4:1: expected class or object definition
+[error] export SCRIPT_DIR="${BASE_LOCATION}/scripts/"
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:5:1: expected class or object definition
+[error] export CONF_DIR="${BASE_LOCATION}/config/"
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:6:1: expected class or object definition
+[error] export JAR_DIR="${BASE_LOCATION}/jar/"
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:7:1: expected class or object definition
+[error] export LOG_DIR="${BASE_LOCATION}/logs/"
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:9:1: expected class or object definition
+[error] SPARK_HOME=/app/tetra/elevate/software/spark/
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:13:1: expected class or object definition
+[error] if [ $# -eq 1 ]; then
+[error] ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:13:18: expected class or object definition
+[error] if [ $# -eq 1 ]; then
+[error]                  ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:14:3: expected class or object definition
+[error]   location=$1
+[error]   ^
+[error] /home/adm_akethar1/proj1-main/src/main/scala/com/tmobile/dlmExtract/serializeddevicehistoryV2Extract.scala:17:3: expected class or object definition
+[error]   exit 1
+[error]   ^
+[error] 150 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 19 s, completed Sep 5, 2025 1:10:57 AM

@@ -1,0 +1,131 @@
+#!/bin/bash
+source ~/.bash_profile
+BASE_LOCATION="/home/adm_akethar1/proj1-main"
+export SCRIPT_DIR="${BASE_LOCATION}/scripts/"
+export CONF_DIR="${BASE_LOCATION}/config/"
+export JAR_DIR="${BASE_LOCATION}/jar/"
+export LOG_DIR="${BASE_LOCATION}/logs/"
+
+SPARK_HOME=/app/UDMF/spark/
+HADOOP_HOME=/app/UDMF/software/hadoop/
+export HADOOP_CONF_DIR=${HADOOP_HOME}/etc/hadoop
+export YARN_CONF_DIR=${HADOOP_HOME}/etc/hadoop
+export HADOOP_HOME=${HADOOP_HOME}
+
+
+if [ $# -eq 1 ]; then
+  location=$1
+else
+  echo "Please send the location details to process further"
+  exit 1
+fi
+
+
+dt=`/bin/date +%d%m%Y_%H%M%S`
+
+
+LOG_FILE=${LOG_DIR}stocktransferorder_extract_"$dt".log
+
+touch $LOG_FILE
+chmod 777 $LOG_FILE
+# Removal of 3 days old log files.
+for FILE in `find $LOG_DIR -mtime +3 | grep "stocktransferorder_extract\.log_"`
+do
+rm -f "$FILE" 2>/dev/null
+done
+# Check if the instance of the script is already running.
+if [ -e ${LOG_DIR}stocktransferorderExtract.lock ]
+then
+echo "Another initiation Failed!!! Another Script is already running. New instance will not be invoked. !!" >> ${LOG_FILE}
+(>&2 echo "Another initiation Failed!!! Another Script is already running. New instance will not be invoked. !!")
+exit 1
+fi
+#------------------------------------------------------------------------------------------------------
+echo $$
+trap 'echo "Kill Signal Received.\n";exit' SIGHUP SIGINT SIGQUIT SIGTERM SIGSEGV
+
+#cat $FILE
+
+echo "Extracting data for yesterday from SOA for stocktransferorder Report" >> ${LOG_FILE}
+touch ${LOG_DIR}stocktransferorderExtract.lock
+chmod 777 ${LOG_DIR}stocktransferorderExtract.lock
+
+
+#Starting the cassandra extraction spark job execution
+echo "Starting stocktransferorder extraction phase..." >> ${LOG_FILE}
+SPARK_HOME=/app/UDMF/spark ${SPARK_HOME}/bin/spark-submit --jars /home/adm_akethar1/proj1-main/lib/config-1.2.0.jar --jars lib/config-1.2.0.jar \
+--class com.tmobile.dlmExtract.stocktransferorderExtract \
+--name stocktransferorderExtract \
+--master local[*] \
+--conf "spark.driver.extraJavaOptions=-XX:MaxPermSize=1024M" \
+--conf spark.sql.autoBroadcastJoinThreshold=209715200 \
+--conf spark.sql.shuffle.partitions=50 \
+--conf spark.shuffle.blockTransferService=nio \
+--driver-memory 4g \
+--conf spark.driver.maxResultSize=2g \
+${JAR_DIR}tetra-elevate-conversion_2.12-1.0.jar ${BASE_LOCATION}/production-config/ extract_config.prod.json SUPPLY_CHAIN $1
+
+if [ $? -eq 0 ]
+then
+    echo "$location stocktransferorder extraction phase completed successfully" >> ${LOG_FILE}
+    
+    # Starting the ingestion phase
+    echo "Starting stocktransferorder ingestion phase..." >> ${LOG_FILE}
+    SPARK_HOME=/app/UDMF/spark ${SPARK_HOME}/bin/spark-submit --jars /home/adm_akethar1/proj1-main/lib/config-1.2.0.jar --jars lib/config-1.2.0.jar \
+    --class com.tmobile.dlmIngestion.stocktransferorderIngest \
+    --name stocktransferorderIngest \
+    --master local[*] \
+    --conf "spark.driver.extraJavaOptions=-XX:MaxPermSize=1024M" \
+    --conf spark.sql.autoBroadcastJoinThreshold=209715200 \
+    --conf spark.sql.shuffle.partitions=50 \
+    --conf spark.shuffle.blockTransferService=nio \
+    --driver-memory 4g \
+    --conf spark.driver.maxResultSize=2g \
+    ${JAR_DIR}tetra-elevate-conversion_2.12-1.0.jar ${BASE_LOCATION}/production-config/ extract_config.prod.json SUPPLY_CHAIN $1
+    
+    if [ $? -eq 0 ]
+    then
+        echo "$location stocktransferorder ingestion phase completed successfully" >> ${LOG_FILE}
+        echo "$location stocktransferorder extraction and ingestion process completed successfully"
+        rm -f ${LOG_DIR}stocktransferorderExtract.lock
+        echo "Lock Released" >> ${LOG_FILE}
+    else
+        echo "$location stocktransferorder ingestion job has failed!!" >> ${LOG_FILE}
+        cd $LOG_DIR
+        sparkfn=$(ls -rt1 sparkstacktrace.log|tail -1)
+        for LOG_DIR in ${sparkfn}
+        do
+            sparkfile1=`echo $LOG_DIR|cut -d ' ' -f 1`
+            ( printf "Dear All,"
+                        printf '%s\n'
+                        printf '%s\n'
+                        printf '%s\n' "$location stocktransferorder ingestion job Failed."
+                        printf '%s\n' "Please find the attached error stack log for analysis."
+                        printf '%s\n'
+                        printf '%s\n' "Thanks,"
+                        printf '%s\n' "DLM-Extraction Team" ) | mailx -s "$location stocktransferorder ingestion job failed" -a ${LOG_DIR} $sparkfile1 mounica.arepalli1@t-mobile.com
+        done
+        rm -f ${LOG_DIR}stocktransferorderExtract.lock
+        echo "Lock Released" >> ${LOG_FILE}
+        exit 1
+    fi
+else
+        echo "$location stocktransferorder extraction job has failed!!" >> ${LOG_FILE}
+        cd $LOG_DIR
+        sparkfn=$(ls -rt1 sparkstacktrace.log|tail -1)
+        for LOG_DIR in ${sparkfn}
+        do
+            sparkfile1=`echo $LOG_DIR|cut -d ' ' -f 1`
+            ( printf "Dear All,"
+                        printf '%s\n'
+                        printf '%s\n'
+                        printf '%s\n' "$location stocktransferorder extraction job Failed."
+                        printf '%s\n' "Please find the attached error stack log for analysis."
+                        printf '%s\n'
+                        printf '%s\n' "Thanks,"
+                        printf '%s\n' "DLM-Extraction Team" ) | mailx -s "$location stocktransferorder extraction job failed" -a ${LOG_DIR} $sparkfile1 mounica.arepalli1@t-mobile.com
+        done
+        rm -f ${LOG_DIR}stocktransferorderExtract.lock
+        echo "Lock Released" >> ${LOG_FILE}
+        exit 1
+fi

@@ -1,0 +1,6 @@
+[info] welcome to sbt 1.11.4 (Red Hat, Inc. Java 1.8.0_462)
+[info] loading settings for project proj1-main-build from plugins.sbt...
+[info] loading project definition from /home/adm_akethar1/proj1-main/project
+[info] loading settings for project proj1-main from build.sbt...
+[info] set current project to tetra-elevate-conversion (in build file:/home/adm_akethar1/proj1-main/)
+[success] Total time: 1 s, completed Sep 5, 2025 1:02:54 AM

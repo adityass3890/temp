@@ -1,0 +1,30 @@
+[INFO] 2025-09-05 01:25:45,705 - <----------- Stock transfer order extraction has started ---------------->
+[INFO] 2025-09-05 01:25:45,705 - Stock transfer order - extraction started on 2025-09-05 01:25:45
+[INFO] 2025-09-05 01:25:48,923 - Extraction query: select * from mycatalog.supply_chain_domain.stocktransferorder
+[INFO] 2025-09-05 01:32:31,718 - <----------- Stock transfer order extraction has started ---------------->
+[INFO] 2025-09-05 01:32:31,718 - Stock transfer order - extraction started on 2025-09-05 01:32:31
+[INFO] 2025-09-05 01:32:34,242 - Extraction query: select * from mycatalog.supply_chain_domain.stocktransferorder
+[INFO] 2025-09-05 01:37:30,137 - <----------- Stock transfer order extraction has started ---------------->
+[INFO] 2025-09-05 01:37:30,137 - Stock transfer order - extraction started on 2025-09-05 01:37:30
+[INFO] 2025-09-05 01:37:32,629 - Extraction query: select * from mycatalog.supply_chain_domain.stocktransferorder
+[INFO] 2025-09-05 01:38:06,572 - <----------- Stock transfer order extraction has started ---------------->
+[INFO] 2025-09-05 01:38:06,572 - Stock transfer order - extraction started on 2025-09-05 01:38:06
+[INFO] 2025-09-05 01:38:08,770 - Extraction query: select * from mycatalog.supply_chain_domain.stocktransferorder
+[INFO] 2025-09-05 01:38:52,863 - <----------- Stock transfer order extraction has started ---------------->
+[INFO] 2025-09-05 01:38:52,863 - Stock transfer order - extraction started on 2025-09-05 01:38:52
+[INFO] 2025-09-05 01:38:55,302 - Extraction query: select * from mycatalog.supply_chain_domain.stocktransferorder
+[INFO] 2025-09-05 01:39:35,975 - <----------- Stock transfer order extraction has started ---------------->
+[INFO] 2025-09-05 01:39:35,975 - Stock transfer order - extraction started on 2025-09-05 01:39:35
+[INFO] 2025-09-05 01:39:38,372 - Extraction query: select * from mycatalog.supply_chain_domain.stocktransferorder
+[INFO] 2025-09-05 01:52:30,517 - <----------- Stock transfer order extraction has started ---------------->
+[INFO] 2025-09-05 01:52:30,518 - Stock transfer order - extraction started on 2025-09-05 01:52:30
+[INFO] 2025-09-05 01:52:32,957 - Extraction query: select * from mycatalog.supply_chain_domain.stocktransferorder
+[INFO] 2025-09-05 02:26:38,317 - <----------- Stock transfer order extraction has started ---------------->
+[INFO] 2025-09-05 02:26:38,317 - Stock transfer order - extraction started on 2025-09-05 02:26:38
+[INFO] 2025-09-05 02:26:41,799 - Extraction query: select * from mycatalog.supply_chain_domain.stocktransferorder
+[INFO] 2025-09-05 02:34:36,182 - <----------- Stock transfer order extraction has started ---------------->
+[INFO] 2025-09-05 02:34:36,182 - Stock transfer order - extraction started on 2025-09-05 02:34:36
+[INFO] 2025-09-05 02:34:38,736 - Extraction query: select * from mycatalog.supply_chain_domain.stocktransferorder
+[INFO] 2025-09-05 02:49:03,696 - <----------- Stock transfer order extraction has started ---------------->
+[INFO] 2025-09-05 02:49:03,696 - Stock transfer order - extraction started on 2025-09-05 02:49:03
+[INFO] 2025-09-05 02:49:06,193 - Extraction query: select * from mycatalog.supply_chain_domain.stocktransferorder

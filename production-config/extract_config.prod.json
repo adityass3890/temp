@@ -1,0 +1,102 @@
+{
+  "sparkMaster": "yarn-cluster",
+  "environment": "PROD",
+  "sourceEnabled": "PROD",
+  "targetEnabled": "PROD",
+  "warehouse": {
+    "outbound_path": "/home/adm_akethar1/proj1-main/data/",
+    "logdir": "/home/adm_akethar1/proj1-main/logs/"
+  },
+  "tables": {
+    "serializeddevicehistory_v2": {
+      "postingdateStart": "2019-01-01",
+      "postingdateEnd": "2025-12-31"
+    },
+    "dualimeiinfo_by_primary_imei": {
+      "postingdateStart": "2019-01-01",
+      "postingdateEnd": "2025-12-31"
+    },
+    "serializedmaterial": {
+      "postingdateStart": "2019-01-01",
+      "postingdateEnd": "2025-12-31"
+    },
+    "stockonhand": {
+      "postingdateStart": "2019-01-01",
+      "postingdateEnd": "2025-12-31"
+    },
+    "stocktransferorder": {
+      "postingdateStart": "2019-01-01",
+      "postingdateEnd": "2025-12-31"
+    }
+  },
+  "cassandra_source": {
+    "TETRA": {
+      "PROD": {
+        "hostname": "tetra-cassandra-prod.example.com",
+        "port": "9042",
+        "username": "tetra_user",
+        "password": "dGV0cmFfcGFzc3dvcmQ=",
+        "truststorepath": "/app/tetra/DLM/certs/cassandra-truststore.jks",
+        "truststorepassword": "dGV0cmFfdHJ1c3RzdG9yZQ==",
+        "cluster_name": "tetra_cluster",
+        "keyspace": "tetra_keyspace",
+        "dc_name": "tetra_dc"
+      }
+    },
+    "HP": {
+      "PROD": {
+        "hostname": "hp-cassandra-prod.example.com",
+        "port": "9042",
+        "username": "hp_user",
+        "password": "aHBfcGFzc3dvcmQ=",
+        "truststorepath": "/app/tetra/DLM/certs/hp-cassandra-truststore.jks",
+        "truststorepassword": "aHBfdHJ1c3RzdG9yZQ==",
+        "cluster_name": "hp_cluster",
+        "keyspace": "hp_keyspace",
+        "dc_name": "hp_dc"
+      }
+    },
+    "SUPPLY_CHAIN": {
+      "PROD": {
+        "hostname": "lpollcmsv0002a.unix.gsm1900.org,lpollcmsv0002b.unix.gsm1900.org,lpollcmsv0002d.unix.gsm1900.org,lpollcmsv0002e.unix.gsm1900.org,lpollcmsv00031.unix.gsm1900.org,lpollcmsv00032.unix.gsm1900.org",
+        "port": "9042",
+        "username": "svc_qat_migrelev",
+        "password": "cGxhYl8zNHl1aHhjZmdybnI=",
+        "truststorepath": "/app/tetra/DLM/certs/supply-chain-truststore.jks",
+        "truststorepassword": "c3VwcGx5X2NoYWluX3RydXN0c3RvcmU=",
+        "cluster_name": "pel_tscs_1",
+        "keyspace": "supply_chain_domain",
+        "dc_name": "pel_tscs_pl_cass_1"
+      }
+    }
+  },
+  "oracle_target": {
+    "PROD": {
+      "url": "jdbc:oracle:thin:@gbl-tdlmg-scan.eitoracle.gsm1900.org:1678/tdlmg",
+      "driver": "oracle.jdbc.OracleDriver",
+      "username": "NAravap1[SCH_NONDLM]",
+      "password": "Tm9uZGxtX3N0YWdpbmdfOTg3NjU0MzIx"
+    }
+  },
+  "performance_settings": {
+    "batch_size": 10000,
+    "parallel_jobs": 4,
+    "connection_timeout": 300000,
+    "read_timeout": 600000,
+    "retry_attempts": 3,
+    "retry_delay": 5000
+  },
+  "monitoring": {
+    "enable_metrics": true,
+    "metrics_port": 4040,
+    "enable_jmx": true,
+    "jmx_port": 9999,
+    "log_level": "INFO"
+  },
+  "security": {
+    "enable_ssl": true,
+    "ssl_protocols": ["TLSv1.2", "TLSv1.3"],
+    "cipher_suites": ["TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384", "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"],
+    "certificate_validation": false
+  }
+}

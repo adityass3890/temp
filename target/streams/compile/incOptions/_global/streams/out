@@ -1,0 +1,38 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/adm_akethar1/proj1-main/target/scala-2.12/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/adm_akethar1/proj1-main/target/scala-2.12/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SchemaDefinition.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	dualimeiinfobyprimaryimeiExtract.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	deviceEventualInfoExtract.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	deviceEventualInfoExtract$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CommonMethods$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	dualimeiinfobyprimaryimeiIngest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	serializedDeviceHistoryCassToOracle.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	dualImeiPrimaryCassToOracle$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	dualImeiPrimaryCassToOracle.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	serializeddevicehistoryV2Ingest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stockonhandIngest$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CommonMethods.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stockonhandIngest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	dualimeiinfobyprimaryimeiIngest$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stockonhandExtract.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SchemaDefinition$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	serializedDeviceHistoryCassToOracle$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stocktransferorderIngest$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GetTimeCycle$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	serializedmaterialExtract.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stocktransferorderExtract.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	serializeddevicehistoryV2Ingest$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	deviceEventualInfoIngest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stockonhandExtract$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stocktransferorderExtract$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	deviceEventualInfoIngest$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	stocktransferorderIngest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	serializedmaterialExtract$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	dualimeiinfobyprimaryimeiExtract$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GetTimeCycle.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/adm_akethar1/proj1-main/target/scala-2.12/classes.bak[0m

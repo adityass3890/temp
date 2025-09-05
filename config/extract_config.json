@@ -1,0 +1,81 @@
+{
+  "sparkMaster": "yarn-cluster",
+  "environment": "Non-PROD",
+  "sourceEnabled": "DEV",
+  "targetEnabled": "DEV",
+  "warehouse": {
+ "outbound_path": "/tmp/migrations/",
+ "logdir": "/home/adm_akethar1/proj1-main/logs/"
+  },
+  "tables": {
+	"serializeddevicehistory_v2": {
+		"postingdateStart": "2019-01-01",
+		"postingdateEnd": "2025-05-13"
+	},
+	"dualimeiinfo_by_primary_imei": {
+		"postingdateStart": "2019-01-01",
+		"postingdateEnd": "2025-05-13"
+	},
+	"serializedmaterial": {
+		"postingdateStart": "2019-01-01",
+		"postingdateEnd": "2025-05-13"
+	},
+	"stockonhand": {
+		"postingdateStart": "2019-01-01",
+		"postingdateEnd": "2025-05-13"
+	},
+	"stocktransferorder": {
+		"postingdateStart": "2019-01-01",
+		"postingdateEnd": "2025-05-13"
+	}
+  },
+
+  "cassandra_source": {
+	"TETRA": {
+		"DEV": {
+			"hostname": "devplcmsv000c.unix.gsm1900.org",
+			"port": "9042",
+			"username": "",
+			"password": "",
+			"truststorepath": "",
+			"truststorepassword": "",
+			"cluster_name": "",
+			"keyspace": ""
+		}
+	},
+	"HP": {
+		"DEV": {
+			"hostname": "devplcmsv000c.unix.gsm1900.org",
+			"port": "9042",
+			"username": "",
+			"password": "",
+			"truststorepath": "",
+			"truststorepassword": "",
+			"cluster_name": "",
+			"keyspace": ""
+		}
+	},
+	"SUPPLY_CHAIN": {
+		"DEV": {
+			"hostname": "lpollcmsv0002a.unix.gsm1900.org,lpollcmsv0002b.unix.gsm1900.org,lpollcmsv0002d.unix.gsm1900.org,lpollcmsv0002e.unix.gsm1900.org,lpollcmsv00031.unix.gsm1900.org,lpollcmsv00032.unix.gsm1900.org",
+			"port": "9042",
+			"username": "svc_qat_migrelev",
+			"password": "cGxhYl8zNHl1aHhjZmdybnI=",
+			"truststorepath": "",
+			"truststorepassword": "",
+			"cluster_name": "pel_tscs_1",
+			"keyspace": "supply_chain_domain",
+			"dc_name": "pel_tscs_pl_cass_1"
+		}
+	}
+  },
+  "oracle_target": {
+    "DEV": {
+      "url": "jdbc:oracle:thin:@gbl-tdlmg-scan.eitoracle.gsm1900.org:1678/tdlmg",
+      "driver": "oracle.jdbc.OracleDriver",
+      "username": "NAravap1[SCH_NONDLM]",
+      "password": "Tm9uZGxtX3N0YWdpbmdfOTg3NjU0MzIx"
+    }
+  }
+}
+
